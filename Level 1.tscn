@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Assets/Firefox.png" type="Texture" id=1]
 [ext_resource path="res://Assets/bg.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Ball.gd" type="Script" id=7]
 [ext_resource path="res://main.gd" type="Script" id=8]
 [ext_resource path="res://enemy.gd" type="Script" id=9]
+[ext_resource path="res://camera.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 129.718, 20.6151 )
@@ -48,13 +49,13 @@ __meta__ = {
 }
 
 [node name="bg" type="Sprite" parent="Bg"]
-position = Vector2( 464.566, 246.993 )
+position = Vector2( 642.868, 246.993 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg"]
-position = Vector2( 437.396, 520.819 )
-scale = Vector2( 3.96, 0.680001 )
+position = Vector2( 647.297, 520.819 )
+scale = Vector2( 5.64, 0.680001 )
 shape = SubResource( 1 )
 
 [node name="Beam1" type="RigidBody2D" parent="."]
@@ -267,5 +268,14 @@ end_cap_mode = 2
 
 [node name="Center" type="Position2D" parent="Sling"]
 position = Vector2( 6.45901, -44.5449 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 508.561, 303.06 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 1400
+limit_bottom = 1000
+script = ExtResource( 10 )
 [connection signal="input_event" from="Chrome" to="Chrome" method="_on_Chrome_input_event"]
 [connection signal="input_event" from="Chrome2" to="Chrome2" method="_on_Chrome_input_event"]
