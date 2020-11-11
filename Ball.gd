@@ -39,7 +39,7 @@ func _input(event):
 			global_position = dis_to_center.normalized() * (boundary) + center_pos
 		
 		on_drag()
-	if event is InputEventMouseButton && !event.is_pressed():
+	if event is InputEventMouseButton && !event.is_pressed() && pressed == 1:
 		pressed = -1
 		shoot()
 
