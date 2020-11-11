@@ -8,6 +8,10 @@ onready var f_line_point = $"Sling/SFront/Point".global_position
 
 onready var center_pos = $"Sling/Center".global_position
 
+onready var scoreText = $"Camera2D/Score"
+
+var score = 0;
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -15,6 +19,7 @@ onready var center_pos = $"Sling/Center".global_position
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	scoreText.set_text("Score:" + str(score))
 	pass # Replace with function body.
 
 
@@ -32,3 +37,7 @@ func set_line_points(pos : Vector2):
 func reset_line_to_origin():
 	set_line_points(center_pos)
 	pass
+
+func score():
+	score = score + 10000
+	scoreText.set_text("Score:" + str(score))
