@@ -1,0 +1,271 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Assets/Firefox.png" type="Texture" id=1]
+[ext_resource path="res://Assets/bg.png" type="Texture" id=2]
+[ext_resource path="res://Assets/beam.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Google.png" type="Texture" id=4]
+[ext_resource path="res://Assets/sling1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/sling2.png" type="Texture" id=6]
+[ext_resource path="res://Ball.gd" type="Script" id=7]
+[ext_resource path="res://main.gd" type="Script" id=8]
+[ext_resource path="res://enemy.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 129.718, 20.6151 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 102.239 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 102.5, 10.028 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 21.0541
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 21.3232
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 23.0708
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 22.0837
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 21.006
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 20.6419
+
+[node name="Level 1" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Bg" type="StaticBody2D" parent="."]
+position = Vector2( 72.3944, 54.0424 )
+z_index = -3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="Bg"]
+position = Vector2( 464.566, 246.993 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg"]
+position = Vector2( 437.396, 520.819 )
+scale = Vector2( 3.96, 0.680001 )
+shape = SubResource( 1 )
+
+[node name="Beam1" type="RigidBody2D" parent="."]
+position = Vector2( 733.379, 431.773 )
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam1"]
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam1"]
+position = Vector2( 0.667419, -2.41652 )
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 2 )
+
+[node name="Beam2" type="RigidBody2D" parent="."]
+position = Vector2( 877.542, 434.443 )
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam2"]
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam2"]
+position = Vector2( 0.667419, -1.70943 )
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 2 )
+
+[node name="Beam3" type="RigidBody2D" parent="."]
+position = Vector2( 808.362, 302.14 )
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam3"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam3"]
+position = Vector2( -1.35355, -0.353554 )
+shape = SubResource( 3 )
+
+[node name="Beam4" type="RigidBody2D" parent="."]
+position = Vector2( 564.379, 432.773 )
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam4"]
+rotation = 1.5708
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam4"]
+position = Vector2( 0.667419, -1.70943 )
+scale = Vector2( 1, 0.5 )
+shape = SubResource( 2 )
+
+[node name="FireFox" type="RigidBody2D" parent="."]
+position = Vector2( 810.239, 251.154 )
+gravity_scale = 12.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FireFox"]
+scale = Vector2( 0.02, 0.02 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireFox"]
+shape = SubResource( 4 )
+
+[node name="Area" type="Area2D" parent="FireFox"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireFox/Area"]
+shape = SubResource( 5 )
+
+[node name="FireFox3" type="RigidBody2D" parent="."]
+position = Vector2( 649.322, 503.929 )
+gravity_scale = 12.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FireFox3"]
+scale = Vector2( 0.02, 0.02 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireFox3"]
+shape = SubResource( 4 )
+
+[node name="Area" type="Area2D" parent="FireFox3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireFox3/Area"]
+shape = SubResource( 6 )
+
+[node name="FireFox2" type="RigidBody2D" parent="."]
+position = Vector2( 805.917, 504.582 )
+gravity_scale = 12.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="FireFox2"]
+scale = Vector2( 0.02, 0.02 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireFox2"]
+shape = SubResource( 4 )
+
+[node name="Area" type="Area2D" parent="FireFox2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireFox2/Area"]
+shape = SubResource( 7 )
+
+[node name="Chrome" type="RigidBody2D" parent="."]
+position = Vector2( 179.153, 520.621 )
+input_pickable = true
+mode = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Chrome"]
+scale = Vector2( 0.09, 0.09 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chrome"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Chrome"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chrome/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Chrome2" type="RigidBody2D" parent="."]
+position = Vector2( 102.342, 523.799 )
+input_pickable = true
+mode = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Chrome2"]
+scale = Vector2( 0.09, 0.09 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chrome2"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Chrome2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chrome2/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Sling" type="Node2D" parent="."]
+position = Vector2( 295.166, 497.438 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="SBack" type="Node2D" parent="Sling"]
+
+[node name="Sprite" type="Sprite" parent="Sling/SBack"]
+scale = Vector2( 0.05, 0.05 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="point" type="Position2D" parent="Sling/SBack"]
+position = Vector2( 17.1498, -47.6631 )
+
+[node name="line" type="Line2D" parent="Sling/SBack/point"]
+z_index = -2
+points = PoolVector2Array( 0, 0, -30, 0 )
+default_color = Color( 0.258824, 0.160784, 0.027451, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="SFront" type="Node2D" parent="Sling"]
+
+[node name="Sprite" type="Sprite" parent="Sling/SFront"]
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 6 )
+
+[node name="Point" type="Position2D" parent="Sling/SFront"]
+position = Vector2( -12.0271, -41.8722 )
+
+[node name="line" type="Line2D" parent="Sling/SFront/Point"]
+z_index = 1
+points = PoolVector2Array( 0, 0, 10, 0 )
+default_color = Color( 0.258824, 0.160784, 0.027451, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Center" type="Position2D" parent="Sling"]
+position = Vector2( 6.45901, -44.5449 )
+[connection signal="input_event" from="Chrome" to="Chrome" method="_on_Chrome_input_event"]
+[connection signal="input_event" from="Chrome2" to="Chrome2" method="_on_Chrome_input_event"]
