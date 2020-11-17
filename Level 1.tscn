@@ -127,7 +127,7 @@ scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam5" type="RigidBody2D" parent="."]
-position = Vector2( 1054, 503.604 )
+position = Vector2( 1056.55, 509.723 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -144,7 +144,7 @@ scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam7" type="RigidBody2D" parent="."]
-position = Vector2( 1219.33, 491.874 )
+position = Vector2( 1220.39, 509.355 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -161,7 +161,7 @@ scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam6" type="RigidBody2D" parent="."]
-position = Vector2( 1140.76, 356.402 )
+position = Vector2( 1141.29, 445.927 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -171,6 +171,21 @@ __meta__ = {
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Beam6"]
+position = Vector2( -1.35355, -0.353554 )
+shape = SubResource( 3 )
+
+[node name="Beam8" type="RigidBody2D" parent="."]
+position = Vector2( 1007.01, 349.686 )
+rotation = -1.34216
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam8"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam8"]
 position = Vector2( -1.35355, -0.353554 )
 shape = SubResource( 3 )
 
@@ -255,7 +270,7 @@ shape = SubResource( 4 )
 shape = SubResource( 7 )
 
 [node name="FireFox5" type="RigidBody2D" parent="."]
-position = Vector2( 1132.36, 244.972 )
+position = Vector2( 1174.83, 409.206 )
 gravity_scale = 12.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -385,5 +400,10 @@ text = "1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2( 1025.75, 264.601 )
+node_a = NodePath("../Bg")
+node_b = NodePath("../Beam8")
 [connection signal="input_event" from="Chrome" to="Chrome" method="_on_Chrome_input_event"]
 [connection signal="input_event" from="Chrome2" to="Chrome2" method="_on_Chrome_input_event"]
