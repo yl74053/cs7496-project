@@ -36,7 +36,7 @@ func _integrate_forces(state):
 	pass
 
 func _input(event):
-	if pressed == 1:
+	if event is InputEventMouse && pressed == 1:
 		global_position = event.position 
 		
 		var dis_to_center = global_position - center_pos

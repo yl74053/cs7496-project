@@ -127,7 +127,7 @@ scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam5" type="RigidBody2D" parent="."]
-position = Vector2( 1047.64, 434.661 )
+position = Vector2( 1054, 503.604 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -144,7 +144,7 @@ scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam7" type="RigidBody2D" parent="."]
-position = Vector2( 1224.99, 433.538 )
+position = Vector2( 1219.33, 491.874 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -161,7 +161,7 @@ scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam6" type="RigidBody2D" parent="."]
-position = Vector2( 1130.51, 298.773 )
+position = Vector2( 1140.76, 356.402 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
