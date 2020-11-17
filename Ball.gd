@@ -15,6 +15,7 @@ var destroy = 0;
 # var b = "text"
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -54,10 +55,11 @@ func _on_Chrome_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && !event.is_pressed():
 		pressed = -1
 	pass # Replace with function body.
-	
-		
 
 func on_drag():
+	var dis = center_pos - global_position
+	var pulse = dis.normalized() * dis.length() * force
+	$"../Sling".update_trajectory(global_position, pulse / self.weight)
 	main.set_line_points(global_position)
 
 func shoot():
