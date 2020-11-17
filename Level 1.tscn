@@ -362,9 +362,6 @@ end_cap_mode = 2
 position = Vector2( 6.45901, -44.5449 )
 
 [node name="Trajectory" type="Line2D" parent="Sling"]
-position = Vector2( -295.166, -484.615 )
-scale = Vector2( 1, 0.923341 )
-points = PoolVector2Array( 301.739, 476.718, 385.226, 407.192 )
 default_color = Color( 1, 1, 1, 1 )
 texture = ExtResource( 11 )
 texture_mode = 1

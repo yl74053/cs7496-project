@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Firefox.png" type="Texture" id=1]
 [ext_resource path="res://Assets/bg.png" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://level_2.gd" type="Script" id=8]
 [ext_resource path="res://enemy.gd" type="Script" id=9]
 [ext_resource path="res://camera.gd" type="Script" id=10]
+[ext_resource path="res://Sling.gd" type="Script" id=11]
+[ext_resource path="res://Assets/dashline.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 129.718, 20.6151 )
@@ -53,7 +55,7 @@ position = Vector2( 642.868, 246.993 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg"]
+[node name="Ground" type="CollisionShape2D" parent="Bg"]
 position = Vector2( 647.297, 520.819 )
 scale = Vector2( 5.64, 0.680001 )
 shape = SubResource( 1 )
@@ -349,8 +351,29 @@ shape = SubResource( 8 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chrome2/Area2D"]
 shape = SubResource( 9 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 508.561, 303.06 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 1400
+limit_bottom = 1000
+script = ExtResource( 10 )
+
+[node name="Score" type="RichTextLabel" parent="Camera2D"]
+margin_left = 250.0
+margin_top = -250.0
+margin_right = 500.0
+margin_bottom = -200.0
+rect_scale = Vector2( 2, 2 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sling" type="Node2D" parent="."]
 position = Vector2( 295.166, 497.438 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -393,24 +416,9 @@ end_cap_mode = 2
 [node name="Center" type="Position2D" parent="Sling"]
 position = Vector2( 6.45901, -44.5449 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 508.561, 303.06 )
-current = true
-limit_left = 0
-limit_top = 0
-limit_right = 1400
-limit_bottom = 1000
-script = ExtResource( 10 )
-
-[node name="Score" type="RichTextLabel" parent="Camera2D"]
-margin_left = 250.0
-margin_top = -250.0
-margin_right = 500.0
-margin_bottom = -200.0
-rect_scale = Vector2( 2, 2 )
-text = "1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Trajectory" type="Line2D" parent="Sling"]
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 12 )
+texture_mode = 1
 [connection signal="input_event" from="Chrome" to="Chrome" method="_on_Chrome_input_event"]
 [connection signal="input_event" from="Chrome2" to="Chrome2" method="_on_Chrome_input_event"]

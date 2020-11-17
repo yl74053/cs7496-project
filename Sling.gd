@@ -23,6 +23,7 @@ var dt = 1
 var damp = 1 - 0.01
 # Numerical Integration :-)
 func update_trajectory(pos, impulse):
+	pos = pos - global_position
 	traj_plot.clear_points()
 	var vel = impulse
 	for i in max_points:
