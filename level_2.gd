@@ -12,8 +12,6 @@ onready var scoreText = $"Camera2D/Score"
 
 var score = 0;
 
-export(String, FILE, ".tscn") var nextLevel
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -39,17 +37,6 @@ func reset_line_to_origin():
 	set_line_points(center_pos)
 	pass
 
-func _on_timer_timeout():
-	get_tree().change_scene(nextLevel)
-
 func score():
 	score = score + 10000
 	scoreText.set_text("Score:" + str(score))
-	if score > 40000:
-		scoreText.set_text("WIN! Score:" + str(score))
-		var timer = Timer.new()
-		timer.connect("timeout", self, "_on_timer_timeout") 
-		#timeout is what says in docs, in signals
-		timer.set_wait_time(3)
-		add_child(timer) #to process
-		timer.start() #to start

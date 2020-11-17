@@ -9,7 +9,7 @@ var force = 10
 onready var area = $"Area2D"
 
 var timer = 50;
-var destory = 0;
+var destroy = 0;
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -21,14 +21,18 @@ func _ready():
 
 func _physics_process(delta):
 	if  area.get_overlapping_bodies().size() > 1:
-		destory = 1;
+		destroy = 1;
 	
-	if destory == 1:
+	if destroy == 1:
 		timer = timer - 1;
 	
 	if timer <= 0:
 		queue_free()
 
+func _integrate_forces(state):
+	var raw = state.get_space_state()
+	
+	pass
 
 func _input(event):
 	if pressed == 1:

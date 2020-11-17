@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/sling1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/sling2.png" type="Texture" id=6]
 [ext_resource path="res://Ball.gd" type="Script" id=7]
-[ext_resource path="res://main.gd" type="Script" id=8]
+[ext_resource path="res://level_2.gd" type="Script" id=8]
 [ext_resource path="res://enemy.gd" type="Script" id=9]
 [ext_resource path="res://camera.gd" type="Script" id=10]
 
@@ -38,9 +38,8 @@ radius = 21.006
 [sub_resource type="CircleShape2D" id=9]
 radius = 20.6419
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 2" type="Node2D"]
 script = ExtResource( 8 )
-nextLevel = "res://Level 2.tscn"
 
 [node name="Bg" type="StaticBody2D" parent="."]
 position = Vector2( 72.3944, 54.0424 )
@@ -60,7 +59,7 @@ scale = Vector2( 5.64, 0.680001 )
 shape = SubResource( 1 )
 
 [node name="Beam1" type="RigidBody2D" parent="."]
-position = Vector2( 733.379, 431.773 )
+position = Vector2( 718.53, 487.634 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -76,8 +75,44 @@ position = Vector2( 0.667419, -2.41652 )
 scale = Vector2( 1, 0.7 )
 shape = SubResource( 2 )
 
+[node name="Beam8" type="RigidBody2D" parent="."]
+position = Vector2( 747.521, 230.248 )
+rotation = 0.58294
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam8"]
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam8"]
+position = Vector2( 0.667419, -2.41652 )
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 2 )
+
+[node name="Beam9" type="RigidBody2D" parent="."]
+position = Vector2( 865.608, 228.833 )
+rotation = -0.58294
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam9"]
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam9"]
+position = Vector2( 0.667419, -2.41652 )
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 2 )
+
 [node name="Beam2" type="RigidBody2D" parent="."]
-position = Vector2( 877.542, 434.443 )
+position = Vector2( 890.27, 488.183 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -108,7 +143,7 @@ position = Vector2( -1.35355, -0.353554 )
 shape = SubResource( 3 )
 
 [node name="Beam4" type="RigidBody2D" parent="."]
-position = Vector2( 564.379, 432.773 )
+position = Vector2( 806.917, 241.147 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -159,7 +194,7 @@ scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam6" type="RigidBody2D" parent="."]
-position = Vector2( 1130.51, 298.773 )
+position = Vector2( 1139.7, 303.723 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -173,7 +208,7 @@ position = Vector2( -1.35355, -0.353554 )
 shape = SubResource( 3 )
 
 [node name="FireFox" type="RigidBody2D" parent="."]
-position = Vector2( 810.239, 251.154 )
+position = Vector2( 766.398, 270.953 )
 gravity_scale = 12.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -273,7 +308,7 @@ shape = SubResource( 4 )
 shape = SubResource( 7 )
 
 [node name="Chrome" type="RigidBody2D" parent="."]
-position = Vector2( 172.546, 522.037 )
+position = Vector2( 182.689, 521.328 )
 input_pickable = true
 mode = 1
 script = ExtResource( 7 )
