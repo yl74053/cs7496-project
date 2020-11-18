@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Firefox.png" type="Texture" id=1]
-[ext_resource path="res://Assets/beam.png" type="Texture" id=3]
+[ext_resource path="res://Assets/brick.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Google.png" type="Texture" id=4]
 [ext_resource path="res://Assets/sling1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/sling2.png" type="Texture" id=6]
@@ -59,7 +59,7 @@ scale = Vector2( 5.64, 0.680001 )
 shape = SubResource( 1 )
 
 [node name="Beam1" type="RigidBody2D" parent="."]
-position = Vector2( 733.379, 431.773 )
+position = Vector2( 1076.93, 483.874 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -68,46 +68,15 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Beam1"]
 rotation = 1.5708
 scale = Vector2( 0.7, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Beam1"]
 position = Vector2( 0.667419, -2.41652 )
 scale = Vector2( 1, 0.7 )
 shape = SubResource( 2 )
 
-[node name="Beam2" type="RigidBody2D" parent="."]
-position = Vector2( 877.542, 434.443 )
-gravity_scale = 12.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Beam2"]
-rotation = 1.5708
-scale = Vector2( 0.7, 1 )
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam2"]
-position = Vector2( 0.667419, -1.70943 )
-scale = Vector2( 1, 0.7 )
-shape = SubResource( 2 )
-
-[node name="Beam3" type="RigidBody2D" parent="."]
-position = Vector2( 808.362, 302.14 )
-gravity_scale = 12.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Beam3"]
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam3"]
-position = Vector2( -1.35355, -0.353554 )
-shape = SubResource( 3 )
-
 [node name="Beam4" type="RigidBody2D" parent="."]
-position = Vector2( 564.379, 432.773 )
+position = Vector2( 1079.24, 307.701 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -116,15 +85,15 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Beam4"]
 rotation = 1.5708
 scale = Vector2( 0.5, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Beam4"]
-position = Vector2( 0.667419, -1.70943 )
+position = Vector2( 0.667419, -2.41652 )
 scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam5" type="RigidBody2D" parent="."]
-position = Vector2( 1056.55, 509.723 )
+position = Vector2( 1225.51, 307.701 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -133,15 +102,15 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Beam5"]
 rotation = 1.5708
 scale = Vector2( 0.5, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Beam5"]
-position = Vector2( 0.667419, -1.70943 )
+position = Vector2( 0.667419, -2.41652 )
 scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
 [node name="Beam7" type="RigidBody2D" parent="."]
-position = Vector2( 1220.39, 509.355 )
+position = Vector2( 720.298, 453.179 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
@@ -150,29 +119,127 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Beam7"]
 rotation = 1.5708
 scale = Vector2( 0.5, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Beam7"]
-position = Vector2( 0.667419, -1.70943 )
+position = Vector2( 0.667419, -2.41652 )
 scale = Vector2( 1, 0.5 )
 shape = SubResource( 2 )
 
+[node name="Beam10" type="RigidBody2D" parent="."]
+position = Vector2( 866.57, 453.179 )
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam10"]
+rotation = 1.5708
+scale = Vector2( 0.5, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam10"]
+position = Vector2( 0.667419, -2.41652 )
+scale = Vector2( 1, 0.5 )
+shape = SubResource( 2 )
+
+[node name="Beam12" type="RigidBody2D" parent="."]
+position = Vector2( 743.803, 272.941 )
+rotation = 0.523599
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam12"]
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam12"]
+position = Vector2( 0.667419, -2.41652 )
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 2 )
+
+[node name="Beam11" type="RigidBody2D" parent="."]
+position = Vector2( 844.054, 275.186 )
+rotation = -0.523599
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam11"]
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam11"]
+position = Vector2( 0.667419, -2.41652 )
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 2 )
+
+[node name="Beam2" type="RigidBody2D" parent="."]
+position = Vector2( 1232.71, 481.495 )
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam2"]
+rotation = 1.5708
+scale = Vector2( 0.7, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam2"]
+position = Vector2( 0.667419, -2.41652 )
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 2 )
+
+[node name="Beam3" type="RigidBody2D" parent="."]
+position = Vector2( 1153.03, 380.057 )
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam3"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam3"]
+position = Vector2( -1.35355, -0.353554 )
+shape = SubResource( 3 )
+
+[node name="Beam9" type="RigidBody2D" parent="."]
+position = Vector2( 795.917, 360.918 )
+gravity_scale = 12.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Beam9"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Beam9"]
+position = Vector2( -1.35355, -0.353554 )
+shape = SubResource( 3 )
+
 [node name="Beam6" type="RigidBody2D" parent="."]
-position = Vector2( 1141.29, 445.927 )
+position = Vector2( 1153.03, 229.204 )
 gravity_scale = 12.0
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Beam6"]
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Beam6"]
 position = Vector2( -1.35355, -0.353554 )
 shape = SubResource( 3 )
 
 [node name="FireFox" type="RigidBody2D" parent="."]
-position = Vector2( 810.239, 251.154 )
+position = Vector2( 1153.79, 323.459 )
 gravity_scale = 12.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -192,7 +259,7 @@ shape = SubResource( 4 )
 shape = SubResource( 5 )
 
 [node name="FireFox2" type="RigidBody2D" parent="."]
-position = Vector2( 805.917, 504.582 )
+position = Vector2( 1148.34, 515.151 )
 gravity_scale = 12.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -212,7 +279,7 @@ shape = SubResource( 4 )
 shape = SubResource( 6 )
 
 [node name="FireFox3" type="RigidBody2D" parent="."]
-position = Vector2( 649.322, 503.929 )
+position = Vector2( 1153.48, 153.131 )
 gravity_scale = 12.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -232,7 +299,7 @@ shape = SubResource( 4 )
 shape = SubResource( 7 )
 
 [node name="FireFox4" type="RigidBody2D" parent="."]
-position = Vector2( 1136.85, 524.465 )
+position = Vector2( 791.98, 503.059 )
 gravity_scale = 12.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -252,7 +319,7 @@ shape = SubResource( 4 )
 shape = SubResource( 7 )
 
 [node name="FireFox5" type="RigidBody2D" parent="."]
-position = Vector2( 1174.83, 409.206 )
+position = Vector2( 792.134, 278.144 )
 gravity_scale = 12.0
 script = ExtResource( 9 )
 __meta__ = {

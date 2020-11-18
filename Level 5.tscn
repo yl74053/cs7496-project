@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Firefox.png" type="Texture" id=1]
 [ext_resource path="res://level_5.gd" type="Script" id=2]
@@ -8,12 +8,16 @@
 [ext_resource path="res://Assets/sling2.png" type="Texture" id=6]
 [ext_resource path="res://Ball.gd" type="Script" id=7]
 [ext_resource path="res://Boss.gd" type="Script" id=8]
+[ext_resource path="res://Assets/tower.png" type="Texture" id=9]
 [ext_resource path="res://Assets/camera.gd" type="Script" id=10]
 [ext_resource path="res://Assets/dashline.png" type="Texture" id=11]
 [ext_resource path="res://Sling.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 129.718, 20.6151 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 28.9848, 98.498 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 158.03
@@ -44,6 +48,70 @@ texture = ExtResource( 3 )
 position = Vector2( 647.297, 520.819 )
 scale = Vector2( 5.64, 0.680001 )
 shape = SubResource( 1 )
+
+[node name="Stone" type="StaticBody2D" parent="."]
+position = Vector2( 985.112, 461.855 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Stone"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone"]
+shape = SubResource( 6 )
+
+[node name="Stone2" type="StaticBody2D" parent="."]
+position = Vector2( 867.646, 471.198 )
+scale = Vector2( 0.9, 0.9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Stone2"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone2"]
+shape = SubResource( 6 )
+
+[node name="Stone3" type="StaticBody2D" parent="."]
+position = Vector2( 758.189, 481.877 )
+scale = Vector2( 0.8, 0.8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Stone3"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone3"]
+shape = SubResource( 6 )
+
+[node name="Stone4" type="StaticBody2D" parent="."]
+position = Vector2( 648.732, 491.221 )
+scale = Vector2( 0.7, 0.7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Stone4"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone4"]
+shape = SubResource( 6 )
+
+[node name="Stone5" type="StaticBody2D" parent="."]
+position = Vector2( 540.61, 503.235 )
+scale = Vector2( 0.6, 0.56 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Stone5"]
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stone5"]
+shape = SubResource( 6 )
 
 [node name="FireFox" type="RigidBody2D" parent="."]
 position = Vector2( 1236.41, 402.354 )
