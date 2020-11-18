@@ -402,9 +402,9 @@ __meta__ = {
 }
 
 [node name="Level" type="RichTextLabel" parent="Camera2D"]
-margin_left = -448.74
+margin_left = -447.405
 margin_top = -250.0
-margin_right = -248.74
+margin_right = -247.405
 margin_bottom = -150.0
 rect_scale = Vector2( 2, 2 )
 text = "Level 1: Home
