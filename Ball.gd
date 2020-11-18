@@ -8,7 +8,7 @@ onready var main = $".."
 var force = 10
 onready var area = $"Area2D"
 
-var timer = 50;
+var timer = 500;
 var destroy = 0;
 # Declare member variables here. Examples:
 # var a = 2

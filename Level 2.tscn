@@ -210,7 +210,7 @@ position = Vector2( -1.35355, -0.353554 )
 shape = SubResource( 3 )
 
 [node name="FireFox" type="RigidBody2D" parent="."]
-position = Vector2( 766.398, 270.953 )
+position = Vector2( 770.858, 269.764 )
 gravity_scale = 12.0
 script = ExtResource( 9 )
 __meta__ = {
