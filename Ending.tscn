@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/end.jpg" type="Texture" id=1]
+
+[node name="Ending" type="Node2D"]
+
+[node name="end" type="Sprite" parent="."]
+position = Vector2( 475.881, 346.777 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 1 )

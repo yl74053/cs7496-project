@@ -43,7 +43,7 @@ func _on_timer_timeout():
 	get_tree().change_scene(nextLevel)
 
 func score():
-	score = score + 10000
+	score = score + 50000
 	scoreText.set_text("Score:" + str(score))
 	if score > 40000:
 		scoreText.set_text("WIN! Score:" + str(score))
