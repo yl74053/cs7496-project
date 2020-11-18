@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="CS7496"
-run/main_scene="res://Level 1.tscn"
+run/main_scene="res://NewGame.tscn"
 config/icon="res://icon.png"
 
 [rendering]
